@@ -1,0 +1,58 @@
+body{
+    font-family: Arial;
+    background: #0f0f0f;
+}
+
+h2{
+    color: white;
+}
+
+ol{
+    color: white;
+}
+
+ul{
+    color: white;
+}
+
+td{
+    color: white;
+}
+
+th{
+    color: white;
+}
+
+.topbar {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    background: #111;
+    padding: 10px;
+}
+
+.topbar a {
+    text-decoration: none;
+    color: white;
+    background: #333;
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+.topbar a{
+    background: linear-gradient(45deg,#d9ff00,#ff0055,#7a00ff);
+    color: white;
+    padding: 8px, 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.topbar a:hover{
+    background: linear-gradient(45deg,#7a00ff,#ff0055,#d9ff00);
+    transform: scale(1.1);
+}

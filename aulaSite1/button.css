@@ -1,0 +1,23 @@
+/*botão enviar*/
+.botaoEnviar{
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    /*degradê*/
+    background: linear-gradient(45deg,#4da6ff,#7a5cff,#ff4da6);
+
+    transition: 0.3s;
+}
+
+.botaoEnviar:hover{
+    background:linear-gradient(45deg,#ff4da6,#7a5cff,#4da6ff);
+    transform: scale(1.1);
+}

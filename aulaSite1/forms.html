@@ -2,62 +2,44 @@
 <html>
     <head>
         <title>Formulários</title>
+        <link rel="stylesheet" href="form.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="button.css">
     </head>
         <body>
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
+            <br>
+            <br>
+            <h2>Formulários</h2>
 
-                <li>
-                    <a href="listas.html">Listas</a>
-                </li>
-
-                <li>
-                    <a href="table.html">Tabelas</a>
-                </li>
-
-                <li>
-                    <a href="img.html">Imagens</a>
-                </li>
-            </ul>
-            <form>
-                <div>
-                <label for="name">Nome:</label>
-                <input type="text">
-                </div>
-                <br>
-
-                <div>
-                <label for="idade">Idade:</label>
-                <input type="number" min="0" max="100">
-                </div> 
-                <br>
-
-                <div>
-                <label for="usuario">Usuário:</label>
-                <input type="text">
-                </div>
-                <br>
-
-                <div>
-                <label for="senha">Senha:</label>
-                <input type="password">
-                </div>
-                <br>
-
-                <div>
-                    <label for="dataEvento">Data do Evento</label>
-                    <input type="date">
-                </div>
-                <br>
-            </form> 
-
-            <div>
-                <form action="https://unipam.edu.br/">
-                    <button type="submit" style="color: crimson;">Enviar</button>
-                </form>
+            <div class="topbar">
+            <a href="index.html">Home</a>
+            <a href="listas.html">Listas</a>
+            <a href="table.html">Tabelas</a>
+            <a href="img.html">Imagens</a>
             </div>
-            
+
+            <br>
+            <br>
+            <br>
+
+            <form class="formulario" action="https://unipam.edu.br/" method="get">
+                <div>
+                <input type="text" placeholder="Nome">
+                </div>
+                <div>
+                <input type="password" placeholder="Senha">
+                </div>
+                <div>
+                <input type="number" placeholder="Idade" min="0" max="100">
+                </div>
+                <br>
+                <div>
+                <label for="dataEvento">Data do Evento</label>
+                <input type="datetime-local">
+                </div>
+                <br>
+                <button class="botaoEnviar" type="submit">Enviar</button>
+                <br>
+            </form>
         </body>
 </html>
