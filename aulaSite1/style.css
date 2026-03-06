@@ -1,3 +1,15 @@
+@keyframes slidebg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 body{
     font-family: Arial;
     background: #0f0f0f;
@@ -53,8 +65,9 @@ th{
 }
 
 .topbar a:hover{
-    background: linear-gradient(45deg,#7a00ff,#ff0055,#d9ff00);
-    transform: scale(1.1);
+   background-image: linear-gradient(45deg,#d9ff00,#ff0055,#7a00ff);
+   background-size: 300% 300%;
+   animation: slidebg 5s linear infinite;
 }
 
 .legend {

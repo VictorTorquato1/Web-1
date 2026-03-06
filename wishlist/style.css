@@ -1,0 +1,102 @@
+body{
+    font-family: Arial;
+    background: #0f0f0f;
+}
+
+.title{
+    color: white;
+}
+
+.botaoSteam{
+  background-color: #343A40;
+  border-radius: 4px;  
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+.botaoEpic{
+  background-color: #343A40;
+  border-radius: 4px;  
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+.botaoHome{
+  background-color: #343A40;
+  border-radius: 4px;  
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+.botaoRe{
+  background-color: #343A40;
+  border-radius: 4px;  
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 16px;
+  background: transparent;
+}
+
+.botaoRl{
+  background-color: #343A40;
+  border-radius: 4px;  
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 16px;
+  background: transparent;
+}
+
+.botaoSteam:hover{
+   background-image: linear-gradient(45deg,#171a21,#1b2838,#66c0f4);
+   background-size: 300% 300%;
+   animation: slidebg 5s linear infinite;
+}
+
+.botaoEpic:hover{
+   background-image: linear-gradient(45deg,#1a1a1a,#4d4d4d,#ffffff);
+   background-size: 300% 300%;
+   animation: slidebg 5s linear infinite;
+}
+
+.botaoHome:hover{
+   background-image: linear-gradient(45deg,#e23906,#ffb347,#ffc0b0);
+   background-size: 300% 300%;
+   animation: slidebg 5s linear infinite;
+}
+
+.botaoRe:hover{
+   background-image: linear-gradient(45deg,#1a0000,#7a0000,#ff1a1a);
+   background-size: 300% 300%;
+   animation: slidebg 5s linear infinite;
+}
+
+.botaoRl:hover{
+   background-image: linear-gradient(45deg,#0f7bff,#00c6ff,#ff7a00);
+   background-size: 300% 300%;
+   animation: slidebg 5s linear infinite;
+}
+
+.iconeRl{
+    width: 20px;
+    height: 20px;
+}
+
+.iconeRe{
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes slidebg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Steam Wishlist</title>
-    </head>
-    <body>
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="epic.html">Epic</a>
-            </li>
-        </ul>
 
-        <h2>Lista de desejos Steam</h2>
+<head>
+    <title>Steam Wishlist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+    <h2 class="title">Lista de desejos Steam</h2>
+    <form action="index.html">
+        <button class="botaoHome" type="submit">Home</button>
+    </form>
+    <br>
+    <form action="epic.html">
+        <button class="botaoEpic" type="submit">Epic</button>
+    </form>
+    <br>
+    <div>
         <form action="https://store.steampowered.com/app/3764200/Resident_Evil_Requiem/">
-            <img src="re.png" alt="RE Requiem" width="100" height="100">
-            <button type="submit">RE Requiem</button>
+            <button class="botaoRe" type="submit">
+                <img src="re.png" class="botaoRe">RE Requiem</button>
         </form>
-    </body>
+    </div>
+</body>
+
 </html>
