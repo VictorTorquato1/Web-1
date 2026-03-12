@@ -41,7 +41,7 @@
             <input type="number" required placeholder="Idade" min="0" max="100">
         </div>
         <div>
-            <input type="tel" required placeholder="(XX) XX XXXXX-XXXX">
+            <input type="tel" required placeholder="(XX) X XXXXX-XXXX">
         </div>
         <div>
             <input type="number" min="0" max="200" placeholder="Peso" step="0.5" required>
@@ -54,7 +54,7 @@
                 <legend class="legend">Estado Civil</legend>
                 <p>
                     <label>
-                        <input type="radio" name="est_civil" value="casado"> Casado:
+                        <input type="radio" name="est_civil" value="casado"> Casado(a):
                     </label>
                 </p>
                 <p>
@@ -111,6 +111,18 @@
             <label for="dataEvento">Data do Evento
                 <input type="datetime-local" required>
             </label>
+        </div>
+        <div>
+            <p>
+                <label>
+                    Site: <input type="url" list="sites" name="link">
+                </label>
+            </p>
+            <datalist id="sites">
+                <option label="Youtube" value="https://www.youtube.com/"></option>
+                <option label="Instagram" value="https://www.instagram.com/"></option>
+                <option label="Discord" value="https://discord.com/"></option>
+            </datalist>
         </div>
 
         <button class="botaoEnviar" type="submit">Enviar</button>
