@@ -2,60 +2,211 @@
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
 
-.title{
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.title {
     color: white;
 }
 
-body{
+body {
     font-family: Arial;
     background: #0f0f0f;
 }
 
-.topbar {
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    gap: 10px;
-    background: #111;
-    padding: 10px;
+
+.icon {
+    width: 20px;
+    height: 20px;
 }
 
-.topbar a {
-    text-decoration: none;
-    color: white;
-    background: #333;
-    padding: 8px 14px;
-    border-radius: 6px;
-}
-
-.topbar a{
-    background: linear-gradient(45deg,#ffffff,#813939,#c00202);
-    color: white;
-    padding: 8px, 18px;
-    text-decoration: none;
-    border-radius: 8px;
+.buttonHome {
+    background: linear-gradient(135deg, #b80505, #8a4343, white);
     font-weight: bold;
+    border-radius: 4px;
+    color: #fff;
+    background-size: 300% 300%;
+    cursor: pointer;
+    padding: 8px 16px;
+    animation: gradientMove 5s ease infinite;
+    transition: 0.3s
+}
+
+.buttonHome:hover {
+    background-image: linear-gradient(45deg, white, #8a4343, #b80505);
+    background-size: 300% 300%;
+    transform: scale(1.05);
+    animation: slidebg 5s linear infinite;
+}
+
+.buttonPro {
+    background: linear-gradient(135deg, #e6c79c, #c68642, #7a4a2a);
+    font-weight: bold;
+    border-radius: 4px;
+    color: #fff;
+    background-size: 300% 300%;
+    cursor: pointer;
+    padding: 8px 16px;
+    animation: gradientMove 5s ease infinite;
+    transition: 0.3s
+}
+
+.buttonPro:hover {
+    background-image: linear-gradient(45deg, #7a4a2a, #c68642, #e6c79c);
+    background-size: 300% 300%;
+    transform: scale(1.05);
+    animation: slidebg 5s linear infinite;
+}
+
+.buttonTon {
+    background: linear-gradient(135deg, #a8e6ff, #3da5d9, #0d3b66);
+    font-weight: bold;
+    border-radius: 4px;
+    color: #fff;
+    background-size: 300% 300%;
+    cursor: pointer;
+    padding: 8px 16px;
+    animation: gradientMove 5s ease infinite;
+    transition: 0.3s
+}
+
+.buttonTon:hover {
+    background-image: linear-gradient(45deg, #0d3b66, #3da5d9, #a8e6ff);
+    background-size: 300% 300%;
+    transform: scale(1.05);
+    animation: slidebg 5s linear infinite;
+}
+
+.buttonIng {
+    background: linear-gradient(135deg, #a5d6a7, #43a047, #1b5e20);
+    font-weight: bold;
+    border-radius: 4px;
+    color: #fff;
+    background-size: 300% 300%;
+    cursor: pointer;
+    padding: 8px 16px;
+    animation: gradientMove 5s ease infinite;
+    transition: 0.3s
+}
+
+.buttonIng:hover {
+    background-image: linear-gradient(45deg, #1b5e20, #43a047, #a5d6a7);
+    background-size: 300% 300%;
+    transform: scale(1.05);
+    animation: slidebg 5s linear infinite;
+}
+
+.buttonMat {
+    background: linear-gradient(135deg, #bcaaa4, #795548, #3e2723);
+    font-weight: bold;
+    border-radius: 4px;
+    color: #fff;
+    background-size: 300% 300%;
+    cursor: pointer;
+    padding: 8px 16px;
+    animation: gradientMove 5s ease infinite;
+    transition: 0.3s
+}
+
+.buttonMat:hover {
+    background-image: linear-gradient(45deg, #3e2723, #795548, #bcaaa4);
+    background-size: 300% 300%;
+    transform: scale(1.05);
+    animation: slidebg 5s linear infinite;
+}
+
+.buttonVal {
+    background: linear-gradient(135deg, #fff2a8, #ffd700, #b8860b);
+    font-weight: bold;
+    border-radius: 4px;
+    color: #fff;
+    background-size: 300% 300%;
+    cursor: pointer;
+    padding: 8px 16px;
+    animation: gradientMove 5s ease infinite;
+    transition: 0.3s
+}
+
+.buttonVal:hover {
+    background-image: linear-gradient(45deg, #b8860b, #ffd700, #fff2a8);
+    background-size: 300% 300%;
+    transform: scale(1.05);
+    animation: slidebg 5s linear infinite;
+}
+
+.buttonKit {
+    background: linear-gradient(135deg, #b0bec5, #546e7a, #263238);
+    font-weight: bold;
+    border-radius: 4px;
+    color: #fff;
+    background-size: 300% 300%;
+    cursor: pointer;
+    padding: 8px 16px;
+    animation: gradientMove 5s ease infinite;
+    transition: 0.3s
+}
+
+.buttonKit:hover {
+    background-image: linear-gradient(45deg, #263238, #546e7a, #b0bec5);
+    background-size: 300% 300%;
+    transform: scale(1.05);
+    animation: slidebg 5s linear infinite;
+}
+
+.buttonLeg {
+    background: linear-gradient(135deg, #8a5a00, #e0c068, #f5f5f5);
+    font-weight: bold;
+    border-radius: 4px;
+    color: #fff;
+    background-size: 300% 300%;
+    cursor: pointer;
+    padding: 8px 16px;
+    animation: gradientMove 5s ease infinite;
+    transition: 0.3s
+}
+
+.buttonLeg:hover {
+    background-image: linear-gradient(45deg, #f5f5f5, #e0c068, #8a5a00);
+    background-size: 300% 300%;
+    transform: scale(1.05);
+    animation: slidebg 5s linear infinite;
+}
+
+.buttonCon {
+    background: linear-gradient(135deg, #1f8f3a, #2ecc71, #a8f0c6);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.topbar a:hover{
-   background-image: linear-gradient(45deg,#c00202,#813939,#ffffff);
-   background-size: 300% 300%;
-   animation: slidebg 5s linear infinite;
-   transform: scale(1.1);
-}
-
-.iconPro{
-    width: 20px;
-    height: 20px;
+.buttonCon:hover {
+    background-image: linear-gradient(45deg, #a8f0c6, #2ecc71, #1f8f3a);
+    background-size: 300% 300%;
+    transform: scale(1.05);
+    animation: slidebg 5s linear infinite;
 }
