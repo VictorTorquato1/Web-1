@@ -1,88 +1,108 @@
-const list = document.getElementById("satchelList")
+const checkboxes = document.querySelectorAll("input[type='checkbox']")
 
-let total = 0
-let checked = 0
+checkboxes.forEach((box, index) => {
 
-satchels.forEach((satchel, sIndex) => {
+    const saved = localStorage.getItem("satchel_checkbox_" + index)
 
-    const div = document.createElement("div")
-    div.className = "satchel"
+    if (saved === "true") {
+        box.checked = true
+    }
 
-    const title = document.createElement("h3")
-    title.textContent = satchel.name
+    box.addEventListener("change", () => {
 
-    div.appendChild(title)
+        localStorage.setItem("satchel_checkbox_" + index, box.checked)
 
-    satchel.materials.forEach((mat, mIndex) => {
+        updateProgress()
 
-        total++
-
-        const label = document.createElement("label")
-        label.className = "material"
-
-        const box = document.createElement("input")
-        box.type = "checkbox"
-
-        const key = `satchel_${sIndex}_${mIndex}`
-
-        if (localStorage.getItem(key) === "true") {
-            box.checked = true
-            checked++
-        }
-
-        box.addEventListener("change", () => {
-
-            localStorage.setItem(key, box.checked)
-
-            updateProgress()
-
-        })
-
-        label.appendChild(box)
-        label.append(" " + mat)
-
-        div.appendChild(label)
+        checkLegendUnlock()
 
     })
 
-    list.appendChild(div)
-
 })
+
 
 function updateProgress() {
 
-    checked = 0
+    const boxes = document.querySelectorAll("input[type='checkbox']")
+    const total = boxes.length
 
-    document.querySelectorAll("input").forEach(b => {
-        if (b.checked) checked++
+    let checked = 0
+
+    boxes.forEach(box => {
+        if (box.checked) checked++
     })
 
     const percent = (checked / total) * 100
 
-    document.getElementById("globalFill").style.width = percent + "%"
+    const bar = document.getElementById("progressFill")
 
-    document.getElementById("globalText").textContent =
+    bar.style.width = percent + "%"
+
+    document.getElementById("progressText").innerText =
         checked + " / " + total + " materials"
+
+    bar.classList.remove("progressEarly", "progressMid", "progressDone")
+
+    if (checked < 18) {
+        bar.classList.add("progressEarly")
+    }
+
+    else if (checked < 21) {
+        bar.classList.add("progressMid")
+    }
+
+    else {
+        bar.classList.add("progressDone")
+    }
 
 }
 
-updateProgress()
 
-/* MAP PINS */
 
-const map = document.getElementById("map")
+function checkLegendUnlock() {
 
-animalHotspots.forEach(h => {
+    const otherBoxes = document.querySelectorAll(
+        ".satchel:not(.legend) input[type='checkbox']"
+    )
 
-    const pin = document.createElement("div")
+    let allDone = true
 
-    pin.className = "pin"
+    otherBoxes.forEach(box => {
+        if (!box.checked) {
+            allDone = false
+        }
+    })
 
-    pin.style.left = h.coords[0] + "px"
-    pin.style.top = h.coords[1] + "px"
+    const legendBoxes = document.querySelectorAll(".legendBox")
 
-    pin.title = h.animal + " hotspot"
+    legendBoxes.forEach(box => {
+        box.disabled = !allDone
+    })
 
-    map.appendChild(pin)
+    if (allDone) {
+
+        document.getElementById("legendMessage").innerText =
+            "Legend of the East unlocked!"
+
+    } else {
+
+        document.getElementById("legendMessage").innerText =
+            "Craft all other satchels to unlock."
+
+    }
+
+}
+
+
+
+document.getElementById("resetProgress").addEventListener("click", () => {
+
+    localStorage.clear()
+
+    location.reload()
 
 })
+
+
+updateProgress()
+checkLegendUnlock()

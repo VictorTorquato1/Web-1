@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -16,47 +17,191 @@
 
     <header>
 
-        <h1>RDR2 Satchel Tracker</h1>
-        <p>Track materials and find animal hotspots</p>
+        <h1>Satchel Craft Tracker</h1>
+
+        <div class="progressContainer">
+
+            <div id="progressText"></div>
+
+            <div class="progressBar">
+                <div id="progressFill" class="progressEarly"></div>
+            </div>
+
+        </div>
+
+        <button id="resetProgress">Reset Progress</button>
 
     </header>
 
-    <div class="layout">
+    <main>
 
-        <aside>
 
-            <h2>Satchels</h2>
+        <div class="satchel tonic">
 
-            <div id="satchelList"></div>
+            <h2>Tonic Satchel</h2>
 
-            <div class="globalProgress">
+            <label>
+                <input type="checkbox">
+                <span>Perfect Deer Pelt</span>
+            </label>
 
-                <h3>Overall Progress</h3>
+            <label>
+                <input type="checkbox">
+                <span>Perfect Buck Pelt</span>
+            </label>
 
-                <div id="globalText"></div>
+            <label>
+                <input type="checkbox">
+                <span>Perfect Elk Pelt</span>
+            </label>
 
-                <div class="progressBar">
-                    <div id="globalFill"></div>
-                </div>
+        </div>
 
-            </div>
 
-        </aside>
 
-        <main>
+        <div class="satchel provisions">
 
-            <div id="map">
+            <h2>Provisions Satchel</h2>
 
-                <img src="assets/map/rdr2map.jpg">
+            <label>
+                <input type="checkbox">
+                <span>Perfect Deer Pelt</span>
+            </label>
 
-            </div>
+            <label>
+                <input type="checkbox">
+                <span>Perfect Bison Pelt</span>
+            </label>
 
-        </main>
+            <label>
+                <input type="checkbox">
+                <span>Perfect Raccoon Pelt</span>
+            </label>
 
-    </div>
+        </div>
 
-    <script src="js/satchels.js"></script>
-    <script src="js/animals.js"></script>
+
+
+        <div class="satchel materials">
+
+            <h2>Materials Satchel</h2>
+
+            <label>
+                <input type="checkbox">
+                <span>Perfect Deer Pelt</span>
+            </label>
+
+            <label>
+                <input type="checkbox">
+                <span>Perfect Boar Pelt</span>
+            </label>
+
+            <label>
+                <input type="checkbox">
+                <span>Perfect Iguana Pelt</span>
+            </label>
+
+        </div>
+
+
+
+        <div class="satchel ingredients">
+
+            <h2>Ingredients Satchel</h2>
+
+            <label>
+                <input type="checkbox">
+                <span>Perfect Deer Pelt</span>
+            </label>
+
+            <label>
+                <input type="checkbox">
+                <span>Perfect Badger Pelt</span>
+            </label>
+
+            <label>
+                <input type="checkbox">
+                <span>Perfect Squirrel Pelt</span>
+            </label>
+
+        </div>
+
+
+
+        <div class="satchel valuables">
+
+            <h2>Valuables Satchel</h2>
+
+            <label>
+                <input type="checkbox">
+                <span>Perfect Deer Pelt</span>
+            </label>
+
+            <label>
+                <input type="checkbox">
+                <span>Perfect Beever Pelt</span>
+            </label>
+
+            <label>
+                <input type="checkbox">
+                <span>Perfect Rabbit Pelt</span>
+            </label>
+
+        </div>
+
+
+
+        <div class="satchel kit">
+
+            <h2>Kit Satchel</h2>
+
+            <label>
+                <input type="checkbox">
+                <span>Perfect Deer Pelt</span>
+            </label>
+
+            <label>
+                <input type="checkbox">
+                <span>Perfect Elk Pelt</span>
+            </label>
+
+            <label>
+                <input type="checkbox">
+                <span>Perfect Panther Pelt</span>
+            </label>
+
+        </div>
+
+
+
+        <div class="satchel legend">
+
+            <h2>Legend of the East</h2>
+
+            <p id="legendMessage">
+                Craft all other satchels to unlock.
+            </p>
+
+            <label>
+                <input type="checkbox" class="legendBox">
+                <span>Perfect Deer Pelt</span>
+            </label>
+
+            <label>
+                <input type="checkbox" class="legendBox">
+                <span>Perfect Cougar Pelt</span>
+            </label>
+
+            <label>
+                <input type="checkbox" class="legendBox">
+                <span>Perfect Wolf Pelt</span>
+            </label>
+
+        </div>
+
+
+    </main>
+
     <script src="js/script.js"></script>
 
 </body>
